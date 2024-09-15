@@ -40,6 +40,7 @@ class Controller {
         for (Object animal : animals) {
             if (animal instanceof Cow) {
                 Cow cow = (Cow) animal;
+                if (cow.getId().equals(inputId))
                 if (cow.getNumUdders() == 4) {
                     return cowFourUdders.checkCowFourUdders(cow);
                 } else if (cow.getNumUdders() == 3) {

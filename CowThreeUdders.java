@@ -5,10 +5,12 @@ class CowThreeUdders {
     private Random random = new Random();
 
     public String checkCowThreeUdders(Cow cow) {
-        System.out.println("Cow Found: \nID: " + cow.getId() + "\nAge: " + cow.getAgeYears() + " years, " + cow.getAgeMonths() + " months\nUdders: " + cow.getNumUdders());
+        String result = "Cow Found: \nID: " + cow.getId() +
+        "\nAge: " + cow.getAgeYears() + " years, " + cow.getAgeMonths() + " months" +
+        "\nUdders: " + cow.getNumUdders();
         
         if (cow.getNumUdders() == 3) {
-            String result = "This cow cannot be milked.";
+            result += "\nThis cow cannot be milked.";
             
             if (random.nextInt(100) < 20) {
                 cow.setNumUdders(4);
